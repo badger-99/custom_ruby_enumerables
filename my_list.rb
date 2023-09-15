@@ -10,4 +10,12 @@ class MyList
   def each
     @list.each { |number| yield (number) }
   end
+
+  def length
+    @list.length
+  end
+
+  def delete(value)
+    @list.delete(value)
+  end
 end
