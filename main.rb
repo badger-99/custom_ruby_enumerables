@@ -19,3 +19,9 @@ puts(list.any? { |e| e == 5 })
 # Test #filter
 puts(list.filter(&:even?))
 # => [2, 4]
+
+puts(list.max)
+# => 4
+
+puts(list.min)
+# => 1

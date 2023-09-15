@@ -17,4 +17,16 @@ module MyEnumerables
     each { |item| result << item if yield(item) }
     result
   end
+
+  def max
+    result = -Float::INFINITY
+    each { |item| result = item if item > result }
+    result
+  end
+
+  def min
+    result = Float::INFINITY
+    each { |item| result = item if item < result }
+    result
+  end
 end
