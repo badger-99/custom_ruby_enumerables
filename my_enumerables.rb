@@ -29,4 +29,15 @@ module MyEnumerables
     each { |item| result = item if item < result }
     result
   end
+
+  def sort
+    result = []
+    copy = clone # cloning whatever array will call this method
+    while copy.length.positive?
+      min_value = copy.min
+      result << min_value
+      copy.delete(min_value)
+    end
+    result
+  end
 end
